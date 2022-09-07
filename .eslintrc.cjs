@@ -38,7 +38,7 @@ module.exports = {
         tabWidth: 2,
         trailingComma: 'none',
         endOfLine: 'auto',
-        printWidth: 100
+        printWidth: 80
       }
     ],
     'react/react-in-jsx-scope': 0,
