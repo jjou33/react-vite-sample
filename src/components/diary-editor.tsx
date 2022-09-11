@@ -1,5 +1,13 @@
 import { useState } from 'react'
 
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
+const DiaryEditorStyle = css({
+  border: '1x solid gray',
+  textAlign: 'center',
+  padding: '20px'
+})
 const DiaryEditor = () => {
   const [state, setState] = useState({
     author: '',
@@ -19,7 +27,7 @@ const DiaryEditor = () => {
     alert('저장')
   }
   return (
-    <div className="DiaryEditor">
+    <div>
       <h2>Diary Example</h2>
       <div>
         <input
