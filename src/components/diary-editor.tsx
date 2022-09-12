@@ -1,12 +1,29 @@
 import { useState } from 'react'
 
-/** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 
 const DiaryEditorStyle = css({
-  border: '1x solid gray',
+  border: '1px solid gray',
   textAlign: 'center',
   padding: '20px'
+})
+
+const textContents = css({
+  marginBottom: '20px',
+  width: '500px',
+  padding: '10px'
+})
+
+const selectBoxStyle = css({
+  width: '300px',
+  padding: '10px',
+  marginBottom: '20px'
+})
+
+const buttonStyle = css({
+  width: '500px',
+  padding: '10px',
+  cursor: 'pointer'
 })
 const DiaryEditor = () => {
   const [state, setState] = useState({
@@ -27,24 +44,21 @@ const DiaryEditor = () => {
     alert('저장')
   }
   return (
-    <div>
+    <div css={DiaryEditorStyle}>
       <h2>Diary Example</h2>
       <div>
-        <input
-          name="author"
-          value={state.author}
-          onChange={handleChangeState}
-        />
+        <input css={textContents} name="author" value={state.author} onChange={handleChangeState} />
       </div>
       <div>
         <textarea
+          css={textContents}
           name="content"
           value={state.content}
           onChange={handleChangeState}
         />
       </div>
       <div>
-        <select name="emotion" onChange={handleChangeState}>
+        <select css={selectBoxStyle} name="emotion" onChange={handleChangeState}>
           <option value={1}>1</option>
           <option value={2}>2</option>
           <option value={3}>3</option>
@@ -53,7 +67,9 @@ const DiaryEditor = () => {
         </select>
       </div>
       <div>
-        <button onClick={handleSubmit}>일기 저장하기</button>
+        <button css={buttonStyle} onClick={handleSubmit}>
+          일기 저장하기
+        </button>
       </div>
     </div>
   )
