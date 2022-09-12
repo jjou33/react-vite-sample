@@ -29,6 +29,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 'warn',
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
     'prettier/prettier': [
       'error',
       {
@@ -38,7 +39,7 @@ module.exports = {
         tabWidth: 2,
         trailingComma: 'none',
         endOfLine: 'auto',
-        printWidth: 80
+        printWidth: 100
       }
     ],
     'react/react-in-jsx-scope': 0,
