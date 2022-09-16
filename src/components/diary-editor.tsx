@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 
-const DiaryEditorStyle = css({
+const DiaryEditorStyle = styled.div({
   border: '1px solid gray',
   textAlign: 'center',
   padding: '20px'
