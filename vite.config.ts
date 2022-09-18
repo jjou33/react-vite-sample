@@ -28,38 +28,3 @@ export default defineConfig(({ mode }): any => {
     }
   }
 })
-
-// export default ({ mode }) => {
-//   const env = loadEnv(mode, process.cwd())
-//   return defineConfig({
-//     server: {
-//       host: env.VITE_HOST,
-//       port: Number(env.VITE_PORT),
-//       open: false
-//     },
-//     resolve: {
-//       alias: [{ find: '@', replacement: resolve(__dirname, 'src') }]
-//     },
-//     plugins: [
-//       react({
-//         jsxImportSource: '@emotion/react',
-//         babel: {
-//           plugins: ['@emotion/babel-plugin']
-//         }
-//       })
-//     ]
-//   })
-// }
-// export default defineConfig({
-//   resolve: {
-//     alias: [{ find: '@', replacement: resolve(__dirname, 'src') }]
-//   },
-//   plugins: [
-//     react({
-//       jsxImportSource: '@emotion/react',
-//       babel: {
-//         plugins: ['@emotion/babel-plugin']
-//       }
-//     })
-//   ]
-// })
