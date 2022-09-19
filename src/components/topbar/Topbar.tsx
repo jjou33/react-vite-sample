@@ -53,8 +53,8 @@ const TopLogo = styled.div({
 })
 
 const TopProfileImgStyle = css({
-  height: '40px',
-  width: '40px',
+  height: '25px',
+  width: '25px',
   borderRadius: '50%',
   cursor: 'pointer'
 })
@@ -66,11 +66,8 @@ const TopMenu = styled.div({
 const TopBar = () => {
   return (
     <TopContainer>
-      TopBar
       <TopWrapper>
-        <TopLogo>
-          <img src="https://img.icons8.com/stickers/50/000000/binoculars.png" />
-        </TopLogo>
+        <TopLogo>HIPPO DEV</TopLogo>
         <TopMenu>
           {/**
            * Notification Icon

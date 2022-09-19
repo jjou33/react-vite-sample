@@ -1,14 +1,18 @@
-import DiaryEditor from '@/components/diary-editor'
 import './App.css'
 import TopBar from '@/components/topbar/Topbar'
-import Sidebar from '@/components/sidebar/SideBar'
+import SidebarMenu from '@/components/sidebar/SideBarMenu'
+import Home from '@/pages/home/Home'
 function App() {
   return (
     <div className="App">
-      <TopBar />
       <div className="container">
-        <Sidebar />
-        <div className="others">other Pages</div>
+        <div className="sideContainer">
+          <SidebarMenu />
+        </div>
+        <div className="mainContainer">
+          <TopBar />
+          <Home />
+        </div>
       </div>
     </div>
   )
