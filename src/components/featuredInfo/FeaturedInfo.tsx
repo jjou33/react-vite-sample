@@ -3,13 +3,13 @@ import { css } from '@emotion/react'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
-const FeaturedDiv = styled.div`
+const FeaturedContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
 `
 
-const FeaturedItemDiv = styled.div`
+const FeaturedItemWrapper = styled.div`
   flex: 1;
   margin: 0 20px;
   padding: 30px;
@@ -54,8 +54,8 @@ const FeaturedIcon = css`
 
 const FeaturedInfo = () => {
   return (
-    <FeaturedDiv>
-      <FeaturedItemDiv>
+    <FeaturedContainer>
+      <FeaturedItemWrapper>
         <FeaturedTitleSpan>Revenue</FeaturedTitleSpan>
         <FeaturedMoneyContainerDiv>
           <FeaturedMoneySpan>$2,415</FeaturedMoneySpan>
@@ -65,9 +65,9 @@ const FeaturedInfo = () => {
           </FeaturedMoneyRateSpan>
         </FeaturedMoneyContainerDiv>
         <FeaturedSubSpan>Compared to last month</FeaturedSubSpan>
-      </FeaturedItemDiv>
+      </FeaturedItemWrapper>
 
-      <FeaturedItemDiv>
+      <FeaturedItemWrapper>
         <FeaturedTitleSpan>Revenue</FeaturedTitleSpan>
         <FeaturedMoneyContainerDiv>
           <FeaturedMoneySpan>$2,415</FeaturedMoneySpan>
@@ -77,9 +77,9 @@ const FeaturedInfo = () => {
           </FeaturedMoneyRateSpan>
         </FeaturedMoneyContainerDiv>
         <FeaturedSubSpan>Compared to last month</FeaturedSubSpan>
-      </FeaturedItemDiv>
+      </FeaturedItemWrapper>
 
-      <FeaturedItemDiv>
+      <FeaturedItemWrapper>
         <FeaturedTitleSpan>Revenue</FeaturedTitleSpan>
         <FeaturedMoneyContainerDiv>
           <FeaturedMoneySpan>$2,415</FeaturedMoneySpan>
@@ -89,8 +89,8 @@ const FeaturedInfo = () => {
           </FeaturedMoneyRateSpan>
         </FeaturedMoneyContainerDiv>
         <FeaturedSubSpan>Compared to last month</FeaturedSubSpan>
-      </FeaturedItemDiv>
-    </FeaturedDiv>
+      </FeaturedItemWrapper>
+    </FeaturedContainer>
   )
 }
 

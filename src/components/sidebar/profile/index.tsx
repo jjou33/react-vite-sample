@@ -1,24 +1,27 @@
 import { css } from '@emotion/react'
-
-const SideProfileDivStyle = css`
+import styled from '@emotion/styled'
+const ProfileContainer = styled.div`
   border-bottom: solid;
   text-align: center;
   position: relative;
   height: 400px;
+  display: flex;
 `
-const SideProfileImgStyle = css`
-  height: 100px;
-  width: 100px;
+
+const ProfileTitleWrapper = styled.div``
+const ProfileImgStyle = css`
+  height: 80px;
+  width: 80px;
   border-radius: 25%;
   cursor: pointer;
   position: absolute;
-  left: 50%;
+  left: 20%;
   top: 25%;
   transform: translate(-50%, -50%);
   background-color: black;
 `
 
-const SideProfileTitle = css`
+const ProfileTitle = styled.span`
   border-radius: 50%;
   width: 100%;
   font-size: 20px;
@@ -43,19 +46,19 @@ const SideProfileTitle = css`
 
 const SideBarProfile = () => {
   return (
-    <div css={SideProfileDivStyle}>
+    <ProfileContainer>
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhuA1ZqTP9khpeXa31QADNMCKFrfwNi_7owA&usqp=CAU"
         alt="Profile Image"
-        css={SideProfileImgStyle}
+        css={ProfileImgStyle}
       />
 
-      <span css={SideProfileTitle}>
+      <ProfileTitle>
         <img className="icon" src="/assets/icons8.png" />
         HIPPO DEV
         <p className="subTitle">FRONT-DEVELOPER</p>
-      </span>
-    </div>
+      </ProfileTitle>
+    </ProfileContainer>
   )
 }
 
