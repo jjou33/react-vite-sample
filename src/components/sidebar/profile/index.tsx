@@ -1,42 +1,80 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
+import logo from '@/assets/image/profile_logo.svg'
 const ProfileContainer = styled.div`
   border-bottom: solid;
   text-align: center;
   position: relative;
   height: 400px;
+
+  /* background: linear-gradient(70deg, #3498db 50%, #ffffff 50%); */
+`
+
+const ProfileDropWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
-const ProfileTitleWrapper = styled.div``
-const ProfileImgStyle = css`
-  height: 80px;
-  width: 80px;
-  border-radius: 25%;
-  cursor: pointer;
-  position: absolute;
-  left: 20%;
-  top: 25%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-`
-
-const ProfileTitle = styled.span`
+const ProfileImgWrapper = styled.div`
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
-  width: 100%;
-  font-size: 20px;
-  font-weight: bold;
   cursor: pointer;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 38%;
   transform: translate(-50%, -50%);
-
-  & img {
-    margin-right: 10px;
+  background: #eee;
+`
+const ProfileImgStyle = styled.div`
+  position: relative;
+  width: 120px;
+  height: 120px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05),
+    15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25px;
     width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
   }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  & > img {
+    position: absolute;
+    margin: 30px 0px 0px 10px;
+    top: 15px;
+    width: 3rem;
+    height: 3rem;
+    color: #444;
+  }
+`
 
+const ProfileTitle = styled.span`
+  font-family: MaplestoryBold;
+  font-size: 1.5rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
   & .subTitle {
     margin-top: 0;
     font-size: 10px;
@@ -46,19 +84,16 @@ const ProfileTitle = styled.span`
 
 const SideBarProfile = () => {
   return (
-    <ProfileContainer>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhuA1ZqTP9khpeXa31QADNMCKFrfwNi_7owA&usqp=CAU"
-        alt="Profile Image"
-        css={ProfileImgStyle}
-      />
-
-      <ProfileTitle>
-        <img className="icon" src="/assets/icons8.png" />
-        HIPPO DEV
-        <p className="subTitle">FRONT-DEVELOPER</p>
-      </ProfileTitle>
-    </ProfileContainer>
+    <div>
+      <ProfileContainer>
+        <ProfileTitle>HIPPO DEV DIARY</ProfileTitle>
+        <ProfileImgWrapper>
+          <ProfileImgStyle>
+            <img src="/src/assets/image/profile_logo2.svg" alt="Profile Image" />
+          </ProfileImgStyle>
+        </ProfileImgWrapper>
+      </ProfileContainer>
+    </div>
   )
 }
 

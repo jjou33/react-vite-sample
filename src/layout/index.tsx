@@ -6,20 +6,28 @@ const BaseLayout = () => {
   const Container = styled.div`
     display: flex;
   `
-  const Contents = styled.div`
+  const Sider = styled.div`
+    flex: 0.8;
+  `
+  const ContentWrapper = styled.div`
     flex: 4;
+  `
+  const Contents = styled.div`
+    /* flex: 4; */
     margin-top: 10px;
   `
   return (
-    <div>
-      <Header />
-      <Container>
+    <Container>
+      <Sider>
         <Aside />
+      </Sider>
+      <ContentWrapper>
+        <Header />
         <Contents>
           <Outlet />
         </Contents>
-      </Container>
-    </div>
+      </ContentWrapper>
+    </Container>
   )
 }
 

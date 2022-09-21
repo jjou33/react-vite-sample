@@ -1,28 +1,31 @@
 import styled from '@emotion/styled'
-import SidebarNavItems from './sidebarNavItem/index'
+import SidebarNavItem from './sidebarNavItem/index'
 import { navListType } from '@/system/types/navList'
-const SidebarMenuWrapper = styled.div`
-  margin-top: 2rem;
-  padding: 0px 0px 0px 15px;
-`
-const SidebarTitleH3 = styled.h3`
-  font-size: 0.9rem;
+const SidebarTitle = styled.h3`
+  font-size: 1.5rem;
   color: rgb(197, 197, 197);
+  padding: 0px 0px 15px 0px;
 `
-const SidebarListUl = styled.ul`
+const SidebarNavWrapper = styled.div`
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 0px 0px 0px 30px;
+`
+
+const SidebarNavItems = styled.ul`
   list-style: node;
 `
 
 const SidebarMenu = (props: any) => {
   const { navList } = props
   return (
-    <SidebarMenuWrapper>
-      <SidebarTitleH3>DashBoard</SidebarTitleH3>
-      <SidebarListUl>
+    <SidebarNavWrapper>
+      <SidebarTitle>DashBoard</SidebarTitle>
+      <SidebarNavItems>
         {props.navList &&
-          navList.map((opt: any, idx: any) => <SidebarNavItems key={idx} opt={opt} />)}
-      </SidebarListUl>
-    </SidebarMenuWrapper>
+          navList.map((opt: any, idx: any) => <SidebarNavItem key={idx} opt={opt} />)}
+      </SidebarNavItems>
+    </SidebarNavWrapper>
   )
 }
 
