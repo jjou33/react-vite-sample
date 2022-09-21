@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-extra-semi': 'error',
     'space-before-function-paren': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 'warn',
