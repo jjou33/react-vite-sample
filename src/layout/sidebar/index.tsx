@@ -4,21 +4,26 @@ import Profile from '@/components/sidebar/profile'
 import { navListType } from '@/system/types/navList'
 
 const Sidebar = () => {
-  const navList: navListType = [
+  const navList: any = [
     {
-      label: 'DashBoard',
-      href: '/home',
-      src: 'https://img.icons8.com/material-outlined/24/000000/home--v2.png'
-    },
-    {
-      label: 'DashBoard1',
-      href: '/home2',
-      src: 'https://img.icons8.com/external-others-bomsymbols-/24/000000/external-analytical-big-data-bluetone-others-bomsymbols-.png'
-    },
-    {
-      label: 'DashBoard2',
-      href: '/home3',
-      src: 'https://img.icons8.com/material-outlined/24/000000/total-sales-1.png'
+      title: 'Algorithm',
+      items: [
+        {
+          label: 'Javscript',
+          href: '/test',
+          IconName: 'javascript'
+        },
+        {
+          label: 'Java',
+          href: '/home',
+          IconName: 'code'
+        },
+        {
+          label: 'Python',
+          href: '/home3',
+          IconName: 'code'
+        }
+      ]
     }
   ]
   const Container = styled.div`

@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
-
+import svgr from 'vite-plugin-svgr'
 //vitejs.dev/config/
 export default defineConfig(({ mode }): any => {
   const env = loadEnv(mode, process.cwd())
@@ -21,6 +21,11 @@ export default defineConfig(({ mode }): any => {
         jsxImportSource: '@emotion/react',
         // 커스텀 바벨 설정: @emotion-babel-plugin 플러그인 추가
         babel: {}
+      }),
+      svgr({
+        svgrOptions: {
+          icon: true
+        }
       })
     ],
     esbuild: {

@@ -1,31 +1,33 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import logo from '@/assets/image/profile_logo.svg'
+
 const ProfileContainer = styled.div`
   border-bottom: solid;
   text-align: center;
   position: relative;
   height: 400px;
-
-  /* background: linear-gradient(70deg, #3498db 50%, #ffffff 50%); */
 `
 
-const ProfileDropWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const ProfileTitle = styled.span`
+  font-family: MaplestoryBold;
+  font-size: 1.5rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
 `
 
 const ProfileImgWrapper = styled.div`
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  left: 50%;
-  top: 38%;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
   background: #eee;
+  // Props
+  height: 120px;
+  width: 120px;
+  left: 50%;
+  top: 38%;
 `
 const ProfileImgStyle = styled.div`
   position: relative;
@@ -64,21 +66,6 @@ const ProfileImgStyle = styled.div`
     width: 3rem;
     height: 3rem;
     color: #444;
-  }
-`
-
-const ProfileTitle = styled.span`
-  font-family: MaplestoryBold;
-  font-size: 1.5rem;
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 12%;
-  transform: translate(-50%, -50%);
-  & .subTitle {
-    margin-top: 0;
-    font-size: 10px;
-    color: #8af08a;
   }
 `
 
