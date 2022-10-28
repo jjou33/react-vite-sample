@@ -32,7 +32,7 @@ const sidebarNavItems = (props: any) => {
       {itemList &&
         itemList.map((item: any, idx: any) => (
           <SidebarListItemLi key={idx}>
-            <Icon size={20} color="#3221BF" icon={item.IconName} key={idx} />
+            <Icon size={20} color="#3221BF" icon={item.IconName} key={idx} /> 
             {/* <img src={JS} alt="" /> */}
             {/* <JS style={{ fill: 'blue', width: '15px', height: '15px' }} /> */}
             {/* <IconComp list={item.IconName} /> */}
